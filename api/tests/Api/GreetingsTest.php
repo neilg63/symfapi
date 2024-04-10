@@ -11,6 +11,7 @@ class GreetingsTest extends ApiTestCase
         static::createClient()->request('POST', '/greetings', [
             'json' => [
                 'name' => 'Kévin',
+                'age' => 36,
             ],
             'headers' => [
                 'Content-Type' => 'application/ld+json',
@@ -22,6 +23,7 @@ class GreetingsTest extends ApiTestCase
             '@context' => '/contexts/Greeting',
             '@type' => 'Greeting',
             'name' => 'Kévin',
+            'age' => 36,
         ]);
     }
 }
